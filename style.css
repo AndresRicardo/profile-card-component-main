@@ -1,11 +1,11 @@
 :root{
-    --color-dark-cyan: hsl(185, 75%, 39%)
-    --color-very-dark-desaturated-blue: hsl(229, 23%, 23%)
-    --color-dark-grayish-blue: hsl(227, 10%, 46%)
-    --color-dark-gray: hsl(0, 0%, 59%)
-    --size-mobile: 375px
-    --size-desktop: 1440px
-    --font-size: 18px
+    --color-dark-cyan: hsl(185, 75%, 39%);
+    --color-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --color-dark-grayish-blue: hsl(227, 10%, 46%);
+    --color-dark-gray: hsl(0, 0%, 59%);
+    --size-mobile: 375px;
+    --size-desktop: 1440px;
+    --font-size: 18px;
 }
 
 
@@ -15,15 +15,100 @@
     box-sizing: border-box;
 }
 
+/* pendiente perfeccionar el background */
 body{
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
     background-color: var(--color-dark-cyan);
+    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+    background-position: -50% -50%;
+    background-repeat: repeat;
 }
 
 .card{
-    background-color: tomato;
+    width: calc(var(--size-mobile) - 50px);
+    background-color: white;
+    background-image: url("images/bg-pattern-card.svg");
+    background-repeat: repeat-x;
+    border-radius: 1em;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.image-container{
+    margin-top: 90px;
+}
+
+.image{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+
+.tittle-container{
+    margin-top: 15px;
+}
+
+.tittle{
+    font-size: 18px;
+    text-align: center;
+}
+
+.tittle #name{
+    font-weight: 700;
+}
+
+.tittle #age{
+    color: var(--color-dark-gray);
+    font-weight: 700;
+}
+
+.tittle #city{
+    color: var(--color-dark-gray);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#statistics{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 25px;
+    margin-top: 25px;
+    border-top: 1px solid var(--color-dark-gray) ;
+}
+
+.values{
+    text-align: center;
+    font-weight: 700;
+}
+
+.values .item{
+    color: var(--color-dark-gray);
+    font-size: 12px;
+}
+
+.attribution{
+    color: var(--color-very-dark-desaturated-blue);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: blue;
+}
+
+
