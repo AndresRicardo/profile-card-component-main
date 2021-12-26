@@ -24,8 +24,9 @@ body{
     align-items: center;
     background-color: var(--color-dark-cyan);
     background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
-    background-position: -50% -50%;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-position: right 52vw bottom 35vh, left 48vw top 52vh; /*así se posicionan 2 imagenes en el mismo background*/
+    
 }
 
 .card{
